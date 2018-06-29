@@ -9,6 +9,11 @@ app.get('/api/courses', (req, res)=>{
     res.send([1,2,3]);
 });
 
+
+app.get('/api/posts/:year/:month', (req, res)=>{
+    res.send(req.query);
+});
+
 // to set environment var on the command line : export PORT=5000   <- any num
 const port = process.env.PORT || 3000;
-app.listen(3000, ()=> console.log(`Listening on port ${port}`));
+app.listen(3000, ()=> console.log(`Listening on port ${port}`)); 
